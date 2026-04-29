@@ -91,13 +91,13 @@ These remain entirely under your own control.
 
 ### TeamCity shared templates
 
-The `teamcity-kotlin-dsl` skill has a shared templates table in `skills/teamcity-kotlin-dsl/SKILL.md` that references `HIABCS/teamcity-actions`. This table contains TODO placeholders and **must be populated** before the `teamcity-devops` agent can recommend org-standard templates.
+The `teamcity-kotlin-dsl` skill (`skills/teamcity-kotlin-dsl/SKILL.md`) documents the shared templates from `HIABCS/teamcity-actions`. Currently the following template is available:
 
-To populate it:
-1. Review the templates in `https://github.com/HIABCS/teamcity-actions`
-2. Edit `skills/teamcity-kotlin-dsl/SKILL.md` — find the `### Available shared templates` section
-3. Add a row per template following the existing format
-4. Open a PR so the whole team benefits
+| Template | Description |
+|---|---|
+| `ConanPublishTemplate` | Full 11-step Conan C/C++ package publish pipeline — installs Conan + JFrog CLI, creates the package for armv7hf, uploads to Artifactory, and publishes build-info with git metadata. |
+
+If new templates are added to `HIABCS/teamcity-actions`, update the `### Available shared templates` table in `skills/teamcity-kotlin-dsl/SKILL.md` and open a PR so the whole team benefits.
 
 ### org-actions
 
