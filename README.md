@@ -34,23 +34,19 @@ Shared [OpenCode](https://opencode.ai) agent team, skills, and plugins for HIABC
 
 ## Install
 
-Run this one-liner:
+**1. Clone the repo:**
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/WictorSvensson/opencode-config/main/setup.sh | bash
+git clone https://github.com/WictorSvensson/opencode-config.git ~/Develop/opencode-config
 ```
 
-Or clone manually and run the setup script:
+**2. Run the setup script:**
 
 ```sh
-git clone https://github.com/WictorSvensson/opencode-config.git ~/.config/opencode-config
-~/.config/opencode-config/setup.sh
+~/Develop/opencode-config/setup.sh
 ```
 
-The script will:
-1. Clone this repo to `~/.config/opencode-config/` (or pull if already cloned)
-2. Symlink all agents, skills, and the plugin into `~/.config/opencode/`
-3. Never overwrite files you've created yourself — it warns and skips them
+`setup.sh` symlinks all agents, skills, and the plugin into `~/.config/opencode/`. It never overwrites files you've created yourself — it warns and skips them instead.
 
 Works on macOS and Linux.
 
@@ -59,10 +55,12 @@ Works on macOS and Linux.
 ## Stay up to date
 
 ```sh
-cd ~/.config/opencode-config && git pull
+cd ~/Develop/opencode-config && git pull
 ```
 
-No need to re-run setup — symlinks already point to the cloned files, so a `git pull` is all it takes.
+No need to re-run `link.sh` — symlinks already point into the repo, so a `git pull` is all it takes.
+
+Re-run `setup.sh` only if new agents or skills have been added to the repo since you first installed.
 
 ---
 
